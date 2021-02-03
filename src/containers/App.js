@@ -32,31 +32,3 @@ const App = () => {
 };
 
 export default App;
-
-/* <Router>
-<div className="container">
-    <nav>
-        <Link to="/" className="link">Home</Link>
-        <ul className="links"> 
-            Ga naar: 
-            <li><Link to="/evelyn" className="link">Evelyn</Link></li>
-            <li><Link to="/aranka" className="link">Aranka</Link></li>
-            <li><Link to="/floris" className="link">Floris</Link></li>
-            <li><Link to="/hector" className="link">Hector</Link></li>
-            <li><Link to="/martina" className="link">Martina</Link></li>
-            <li><Link to="/maurits" className="link">Maurits</Link></li>
-            <li><Link to="/rahima" className="link">Rahima</Link></li>
-            <li><Link to="/sandra" className="link">Sandra</Link></li>
-            <li><Link to="/wietske" className="link">Wietske</Link></li>
-            <li><Link to="/storm" className="link">Storm</Link></li>
-        </ul>
-    </nav>
-    <main>
-        <Switch>
-            <Route path="/">
-                <Home studentData={studentData}/>
-            </Route>
-        </Switch>
-    </main>
-</div>
-</Router> */
