@@ -4,12 +4,15 @@ const Chart = (props) => {
     const difficultyRatings = props.difficultyRatings;
     const funRatings = props.funRatings;
 
+    let difficulty = true;
+    let fun = true;
+    
     return(
         <div>
             <VictoryChart
                 theme={VictoryTheme.material}
                 domain={{ y: [0.5, 5.5]}}
-                padding={{ top: 25, left: 60, bottom: 25 }}
+                padding={{ top: 25, left: 60, bottom: 25, right: 160}}
              >
                 <VictoryAxis 
                     style={{tickLabels: {fontSize: 3, padding: 2}}}
@@ -28,16 +31,28 @@ const Chart = (props) => {
                     style={{ data: { width: 2 } }}
                     colorScale={["red", "green"]}
                 >
-                    <VictoryBar
+
+                    {difficulty ? <VictoryBar
                         data={difficultyRatings}
                         x="assignment"
                         y="difficultyRating"
-                    />
-                    <VictoryBar
+                    /> : <VictoryBar
+                    data={difficultyRatings}
+                    x="assignment"
+                    y=""
+                />}
+
+                    {fun ? <VictoryBar
                         data={funRatings}
                         x="assignment"
                         y="funRating"
-                    />
+                    /> : <VictoryBar
+                    data={funRatings}
+                    x="assignment"
+                    y=""
+                />}
+                    
+                    
                 </VictoryGroup>
             </VictoryChart>
         </div>
