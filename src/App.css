@@ -18,3 +18,24 @@ nav {
   margin-left: 15px;
 }
 
+.profile {
+  margin-top: 10px;
+  display: flex;
+  justify-content: start;
+  margin-left: 15%;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.name {
+  font-weight: bold;
+  margin-left: 5px;
+}
+img {
+  border: 1px solid gray;
+  border-radius: 99px;
+}

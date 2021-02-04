@@ -3,7 +3,7 @@ import { useEffect } from 'react/cjs/react.development';
 import { add_name_list, clear_name_list } from '../actions';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { getUnique } from '../functions';
-import StudentPage from '../components/StudentPage';
+import StudentPage from './StudentPage';
 import Dashboard from './Dashboard';
 
 const Home = (props) => {
@@ -35,17 +35,17 @@ const Home = (props) => {
     });
 
     const mappedRoutes = nameList.map((item) => {
-        return <Route path={`/${item.name}`}><StudentPage student={item.name} studentData={studentData}/></Route>
+        return <Route path={`/${item.name}`}><StudentPage student={item.name} studentData={studentData} /></Route>
     });
 
-    return(
-        <div>            
+    return (
+        <div>
             <Router>
                 <div className="container">
                     <nav>
                         <Link to="/" className="link" key="Home">Home / Dashboard</Link>
-                        <ul className="links"> 
-                            Studenten Paginas: 
+                        <ul className="links">
+                            Persoonlijke Pagina's:
                                 {mappedLinks}
                         </ul>
                     </nav>
@@ -53,12 +53,12 @@ const Home = (props) => {
                         <Switch>
                             {mappedRoutes}
                             <Route path="/">
-                                <Dashboard studentData={studentData}/>
+                                <Dashboard studentData={studentData} />
                             </Route>
                         </Switch>
                     </main>
                 </div>
-        </Router>
+            </Router>
         </div>
     );
 };

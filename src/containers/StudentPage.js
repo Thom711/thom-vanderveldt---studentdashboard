@@ -1,5 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import Chart from '../components/Chart';
+import StudentProfile from '../components/StudentProfile';
+import studentInfo from '../data/studentInfo';
 import { useEffect } from 'react/cjs/react.development';
 import { add_diff_ratings, clear_diff_ratings, add_fun_ratings, clear_fun_ratings } from '../actions';
 
@@ -7,12 +9,14 @@ const StudentPage = (props) => {
     const dispatch = useDispatch();
     const studentName = props.student;
     const studentData = props.studentData;
-
+    const profile = studentInfo.filter((student) => {
+        return student.first_name === studentName;
+    });
     const difficultyRatings = useSelector(state => state.difficultyRatings);
     const funRatings = useSelector(state => state.funRatings);
 
     useEffect(() => {
-        if(studentData) {
+        if (studentData) {
             dispatch(clear_diff_ratings());
             dispatch(clear_fun_ratings());
 
@@ -35,13 +39,13 @@ const StudentPage = (props) => {
     return (
         <div>
             <div>
-                Hi {props.student}
+                <StudentProfile profile={profile}/>
             </div>
             <div>
-                <Chart difficultyRatings={difficultyRatings} funRatings={funRatings}/>
+                <Chart difficultyRatings={difficultyRatings} funRatings={funRatings} />
             </div>
         </div>
-        
+
     );
 };
 

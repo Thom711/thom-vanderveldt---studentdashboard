@@ -31,28 +31,30 @@ const Chart = (props) => {
                     style={{ data: { width: 2 } }}
                     colorScale={["red", "green"]}
                 >
-
-                    {difficulty ? <VictoryBar
-                        data={difficultyRatings}
-                        x="assignment"
-                        y="difficultyRating"
-                    /> : <VictoryBar
-                    data={difficultyRatings}
-                    x="assignment"
-                    y=""
-                />}
-
-                    {fun ? <VictoryBar
-                        data={funRatings}
-                        x="assignment"
-                        y="funRating"
-                    /> : <VictoryBar
-                    data={funRatings}
-                    x="assignment"
-                    y=""
-                />}
-                    
-                    
+                    {difficulty ? 
+                        <VictoryBar
+                            data={difficultyRatings}
+                            x="assignment"
+                            y="difficultyRating"
+                        /> : 
+                        <VictoryBar
+                            data={difficultyRatings}
+                            x="assignment"
+                            y=""
+                        />
+                    }
+                    {fun ? 
+                        <VictoryBar
+                            data={funRatings}
+                            x="assignment"
+                            y="funRating"
+                        /> : 
+                        <VictoryBar
+                            data={funRatings}
+                            x="assignment"
+                            y=""
+                        />
+                    }  
                 </VictoryGroup>
             </VictoryChart>
         </div>

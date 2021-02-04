@@ -15,7 +15,7 @@ const Dashboard = (props) => {
         let length = 0;
         let totalRating = 0;
         studentData.forEach((item) => {
-            if(item["Welke opdracht of welk project lever je nu in?"] === assignment) {
+            if (item["Welke opdracht of welk project lever je nu in?"] === assignment) {
                 const currentRating = parseInt(item[whatRating]);
                 length++;
                 totalRating = totalRating + currentRating;
@@ -37,27 +37,27 @@ const Dashboard = (props) => {
             const difficultyRating = getRatingPerAssignment(assignment, "Hoe moeilijk vond je deze opdracht?");
             const funRating = getRatingPerAssignment(assignment, "Hoe leuk vond je deze opdracht?");
 
-                dispatch(add_diff_ratings({
-                    assignment: assignment,
-                    difficultyRating: difficultyRating
-                }));
-    
-                dispatch(add_fun_ratings({
-                    assignment: assignment,
-                    funRating: funRating
-                }));
+            dispatch(add_diff_ratings({
+                assignment: assignment,
+                difficultyRating: difficultyRating
+            }));
+
+            dispatch(add_fun_ratings({
+                assignment: assignment,
+                funRating: funRating
+            }));
         });
     };
 
     useEffect(() => {
-        if(studentData) {
+        if (studentData) {
             setAverageRatings();
         };
     }, [studentData]);
 
     return (
         <div>
-            <Chart difficultyRatings={difficultyRatings} funRatings={funRatings}/>
+            <Chart difficultyRatings={difficultyRatings} funRatings={funRatings} />
         </div>
     );
 };
