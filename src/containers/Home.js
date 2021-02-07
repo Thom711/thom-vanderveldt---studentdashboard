@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react/cjs/react.development';
-import { add_name_list, clear_name_list } from '../actions';
+import { add_name_list, clear_name_list, change_filters } from '../actions';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { getUnique } from '../functions';
 import StudentPage from './StudentPage';
@@ -21,6 +21,8 @@ const Home = (props) => {
             dispatch(add_name_list({
                 name: name
             }));
+
+            dispatch(change_filters(name, true));
         });
     };
 
@@ -53,7 +55,7 @@ const Home = (props) => {
                         <Switch>
                             {mappedRoutes}
                             <Route path="/">
-                                <Dashboard studentData={studentData} />
+                                <Dashboard studentData={studentData} nameList={nameList} />
                             </Route>
                         </Switch>
                     </main>

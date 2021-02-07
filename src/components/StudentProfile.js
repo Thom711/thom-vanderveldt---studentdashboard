@@ -1,6 +1,6 @@
 const StudentProfile = (props) => {
-    const profile = props.profile[0]
-    console.log(profile)
+    const profile = props.profile[0];
+
     return (
         <div className="profile">
                 <div className="profile-header">

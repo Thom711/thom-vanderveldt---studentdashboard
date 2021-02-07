@@ -43,3 +43,11 @@ export const clear_name_list = () => {
         type: "CLEAR_NAME_LIST"
     };
 };
+
+export const change_filters = (value, checked) => {
+    return {
+        type: "FILTERS",
+        payload: value,
+        checked: checked
+    };
+};

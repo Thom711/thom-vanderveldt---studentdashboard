@@ -21,7 +21,7 @@ nav {
 .profile {
   margin-top: 10px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   margin-left: 15%;
 }
 
@@ -35,7 +35,19 @@ nav {
   font-weight: bold;
   margin-left: 5px;
 }
+
 img {
   border: 1px solid gray;
   border-radius: 99px;
+}
+
+.flex {
+  border-left: 1px solid gray;
+  border-radius: 10px;
+  display: flex;
+  margin-left: 10px;
+}
+
+.last-box {
+  margin-left: 25px;
 }
