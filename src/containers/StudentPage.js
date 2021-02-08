@@ -25,12 +25,12 @@ const StudentPage = (props) => {
             }).forEach((item) => {
                 dispatch(add_diff_ratings({
                     assignment: item["Welke opdracht of welk project lever je nu in?"],
-                    difficultyRating: item["Hoe moeilijk vond je deze opdracht?"]
+                    difficultyRating: parseInt(item["Hoe moeilijk vond je deze opdracht?"])
                 }));
 
                 dispatch(add_fun_ratings({
                     assignment: item["Welke opdracht of welk project lever je nu in?"],
-                    funRating: item["Hoe leuk vond je deze opdracht?"]
+                    funRating: parseInt(item["Hoe leuk vond je deze opdracht?"])
                 }));
             });
         };
@@ -38,7 +38,7 @@ const StudentPage = (props) => {
 
     return (
         <div>
-            <div>
+            <div className="flex">
                 <StudentProfile profile={profile}/>
             </div>
             <div>

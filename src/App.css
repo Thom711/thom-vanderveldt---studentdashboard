@@ -2,7 +2,9 @@
   margin: 0 30px;
 }
 
-nav {
+.nav-bar {
+  display: flex;
+  justify-content: center;
   background-color: darkslateblue;
   border-bottom: 1px solid gray;
 }
@@ -18,11 +20,43 @@ nav {
   margin-left: 15px;
 }
 
-.profile {
-  margin-top: 10px;
+.right {
+  margin-left: 550px;
+}
+
+.flex {
   display: flex;
-  justify-content: start;
-  margin-left: 15%;
+  justify-content: center;
+}
+
+.filters {
+  background-color: rgb(108, 94, 199);
+  padding: 5px 15px;
+  color: white;
+  border-bottom: 1px solid gray;
+}
+
+.chart-filters {
+  background-color: rgb(130, 114, 236);
+  padding: 5px 15px;
+  color: white;
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter {
+  margin-left: 10px;
+}
+
+.profile {
+  display: flex;
+  justify-content: flex-start;
+  background-color: rgb(108, 94, 199);
+  padding: 5px 15px;
+  color: white;
+  border-bottom: 1px solid gray;
 }
 
 .profile-header {
@@ -35,7 +69,18 @@ nav {
   font-weight: bold;
   margin-left: 5px;
 }
+
 img {
   border: 1px solid gray;
+  background-color: white;
   border-radius: 99px;
+}
+
+.last-box {
+  margin-left: 25px;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
 }

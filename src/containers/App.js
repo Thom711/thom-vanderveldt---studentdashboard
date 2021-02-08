@@ -13,11 +13,11 @@ const App = () => {
         async function getData() {
             const response = await fetch('studentData.csv');
             const reader = response.body.getReader();
-            const result = await reader.read(); // raw array
+            const result = await reader.read();
             const decoder = new TextDecoder('utf-8');
-            const csv = decoder.decode(result.value); // the csv text
-            const results = Papa.parse(csv, { header: true }); // object with { data, errors, meta } 
-            const rows = results.data // array of objects
+            const csv = decoder.decode(result.value);
+            const results = Papa.parse(csv, { header: true });
+            const rows = results.data;
             dispatch(add_data(rows));
         };
 
