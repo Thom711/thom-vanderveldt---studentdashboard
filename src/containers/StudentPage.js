@@ -38,7 +38,7 @@ const StudentPage = (props) => {
 
     return (
         <div>
-            <div>
+            <div className="flex">
                 <StudentProfile profile={profile}/>
             </div>
             <div>

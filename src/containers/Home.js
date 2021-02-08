@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { getUnique } from '../functions';
 import StudentPage from './StudentPage';
 import Dashboard from './Dashboard';
+import TableContainer from './TableContainer';
 
 const Home = (props) => {
     const dispatch = useDispatch();
@@ -27,7 +28,7 @@ const Home = (props) => {
     };
 
     useEffect(() => {
-        if(studentData) {
+        if (studentData) {
             setStudentNames();
         };
     }, [studentData]);
@@ -44,18 +45,25 @@ const Home = (props) => {
         <div>
             <Router>
                 <div className="container">
-                    <nav>
-                        <Link to="/" className="link" key="Home">Home / Dashboard</Link>
-                        <ul className="links">
-                            Persoonlijke Pagina's:
-                                {mappedLinks}
-                        </ul>
-                    </nav>
+                    <div className="nav-bar">
+                        <nav>
+                            <Link to="/" className="link" key="Home">Home / Dashboard</Link>
+                            <Link to="/table" className="link right" key="table">Zie data als tabel</Link>
+                            <ul className="links">
+                                Persoonlijke Pagina's:
+                                    {mappedLinks}
+                            </ul>
+                        </nav>
+                    </div>
+
                     <main>
                         <Switch>
                             {mappedRoutes}
+                            <Route path="/table">
+                                <TableContainer studentData={studentData} nameList={nameList} key="table" />
+                            </Route>
                             <Route path="/">
-                                <Dashboard studentData={studentData} nameList={nameList} />
+                                <Dashboard studentData={studentData} nameList={nameList} key="dashboard" />
                             </Route>
                         </Switch>
                     </main>

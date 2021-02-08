@@ -60,11 +60,11 @@ const Dashboard = (props) => {
     const handleChange = (event) => {
         const checked = event.target.checked;
         const name = event.target.name;
-        dispatch(change_filters(name, checked))
+        dispatch(change_filters(name, checked));
     };
 
     const mappedNames = nameList.map((name) => {
-        return <label for={name.name}>
+        return <label className="filter">
                     <input 
                         type="checkbox" 
                         name={name.name} 
@@ -78,13 +78,10 @@ const Dashboard = (props) => {
 
     return (
         <div>
-            <div>
-                Zie de data van: {mappedNames} <br/>
-                Selectbox voor sorteren van de bar chart op cijfers 0-9 of 9-0. <br/>
-                Alternatieve barchart per opdracht met op de assen de cijfers en de namen van de studenten. <br/>
-                Deze kan vervolgens gesorteerd worden op cijfers 0-9 of 9-0. <br/>
-                Extra link in de header naar een tabel view.
-
+            <div className="flex">
+                <div className="filters">
+                    Filter op: {mappedNames} <br/>
+                </div>
             </div>
             <div>
                 <Chart difficultyRatings={difficultyRatings} funRatings={funRatings}/>
