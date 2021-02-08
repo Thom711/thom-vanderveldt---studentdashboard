@@ -1,4 +1,4 @@
-import { VictoryBar, VictoryChart, VictoryAxis, VictoryTheme, VictoryGroup, VictoryLine, VictoryLabel, VictoryLegend, Point } from 'victory';
+import { VictoryBar, VictoryChart, VictoryAxis, VictoryTheme, VictoryGroup, VictoryLine, VictoryLabel, VictoryLegend } from 'victory';
 import React, { useState } from 'react';
 
 const Chart = (props) => {
