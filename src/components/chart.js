@@ -1,4 +1,4 @@
-import { VictoryBar, VictoryChart, VictoryAxis, VictoryTheme, VictoryGroup, VictoryLine } from 'victory';
+import { VictoryBar, VictoryChart, VictoryAxis, VictoryTheme, VictoryGroup, VictoryLine, VictoryLabel, VictoryLegend, Point } from 'victory';
 import React, { useState } from 'react';
 
 const Chart = (props) => {
@@ -29,9 +29,24 @@ const Chart = (props) => {
                         theme={VictoryTheme.material}
                         padding={{ top: 25, left: 100, bottom: 25, right: 120 }}
                     >
+                        <VictoryLegend x={240} y={10}
+                            orientation="vertical"
+                            style={{ labels: { fontSize: 5} }}
+                            data={[
+                            { name: "Hoe moeilijk de opdracht was", symbol: { fill: "red" } },
+                            { name: "Hoe leuk de opdracht was", symbol: { fill: "green" } },
+                            ]}
+                        />
                         <VictoryAxis
                             style={{ tickLabels: { fontSize: 3, padding: 2 } }}
                             invertAxis
+                            label="Opdracht"
+                            axisLabelComponent={
+                                <VictoryLabel
+                                    y={50}
+                                    x={60}
+                                />
+                            }      
                         />
                         <VictoryAxis
                             dependentAxis
@@ -39,6 +54,12 @@ const Chart = (props) => {
                             orientation="top"
                             width={200}
                             tickValues={[1, 2, 3, 4, 5]}
+                            label="Score"
+                            axisLabelComponent={
+                                <VictoryLabel
+                                    y={15}
+                                />
+                            }  
                         />
                         <VictoryGroup
                             horizontal
@@ -77,9 +98,24 @@ const Chart = (props) => {
                         theme={VictoryTheme.material}
                         padding={{ top: 25, left: 100, bottom: 25, right: 120 }}
                     >
+                        <VictoryLegend x={240} y={10}
+                            orientation="vertical"
+                            style={{ labels: { fontSize: 5} }}
+                            data={[
+                            { name: "Hoe moeilijk de opdracht was", symbol: { fill: "red" } },
+                            { name: "Hoe leuk de opdracht was", symbol: { fill: "green" } },
+                            ]}
+                        />
                         <VictoryAxis
                             style={{ tickLabels: { fontSize: 3, padding: 2 } }}
                             invertAxis
+                            label="Opdracht"
+                            axisLabelComponent={
+                                <VictoryLabel
+                                    y={50}
+                                    x={60}
+                                />
+                            }      
                         />
                         <VictoryAxis
                             dependentAxis
@@ -87,6 +123,12 @@ const Chart = (props) => {
                             orientation="top"
                             width={200}
                             tickValues={[1, 2, 3, 4, 5]}
+                            label="Score"
+                            axisLabelComponent={
+                                <VictoryLabel
+                                    y={15}
+                                />
+                            }      
                         />
                         <VictoryGroup
                             horizontal

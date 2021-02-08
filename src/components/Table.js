@@ -26,17 +26,20 @@ const Table = (props) => {
 
     return (
         <div>
-            Sorteer op: <select name="sort" onChange={handleChange}>
-                <option value="none">Niet sorteren</option>
-                <option value="name-az">Voornaam A-Z</option>
-                <option value="name-za">Voornaam Z-A</option>
-                <option value="assignment-az">Opdracht A-Z</option>
-                <option value="assignment-za">Opdracht Z-A</option>
-                <option value="diff-lowhigh">Hoe moeilijk? 1-5</option>
-                <option value="diff-highlow">Hoe moeilijk? 5-1</option>
-                <option value="fun-lowhigh">Hoe leuk? 1-5</option>
-                <option value="fun-highlow">Hoe leuk? 5-1</option>
-            </select>
+            <div className="flex chart-filters">
+                Sorteer op: <select name="sort" onChange={handleChange}>
+                    <option value="none">Niet sorteren</option>
+                    <option value="name-az">Voornaam A-Z</option>
+                    <option value="name-za">Voornaam Z-A</option>
+                    <option value="assignment-az">Opdracht A-Z</option>
+                    <option value="assignment-za">Opdracht Z-A</option>
+                    <option value="diff-lowhigh">Hoe moeilijk? 1-5</option>
+                    <option value="diff-highlow">Hoe moeilijk? 5-1</option>
+                    <option value="fun-lowhigh">Hoe leuk? 1-5</option>
+                    <option value="fun-highlow">Hoe leuk? 5-1</option>
+                </select>
+            </div>
+            
 
             <div className="table-container">
                 <table>
