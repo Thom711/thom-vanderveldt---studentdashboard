@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/thom-vanderveldt---studentdashboard/static/css/main.e0179e43.chunk.css",
+    "main.js": "/thom-vanderveldt---studentdashboard/static/js/main.990bd8d1.chunk.js",
+    "main.js.map": "/thom-vanderveldt---studentdashboard/static/js/main.990bd8d1.chunk.js.map",
+    "runtime-main.js": "/thom-vanderveldt---studentdashboard/static/js/runtime-main.f473ff0a.js",
+    "runtime-main.js.map": "/thom-vanderveldt---studentdashboard/static/js/runtime-main.f473ff0a.js.map",
+    "static/js/2.931d508f.chunk.js": "/thom-vanderveldt---studentdashboard/static/js/2.931d508f.chunk.js",
+    "static/js/2.931d508f.chunk.js.map": "/thom-vanderveldt---studentdashboard/static/js/2.931d508f.chunk.js.map",
+    "index.html": "/thom-vanderveldt---studentdashboard/index.html",
+    "static/css/main.e0179e43.chunk.css.map": "/thom-vanderveldt---studentdashboard/static/css/main.e0179e43.chunk.css.map",
+    "static/js/2.931d508f.chunk.js.LICENSE.txt": "/thom-vanderveldt---studentdashboard/static/js/2.931d508f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f473ff0a.js",
+    "static/js/2.931d508f.chunk.js",
+    "static/css/main.e0179e43.chunk.css",
+    "static/js/main.990bd8d1.chunk.js"
+  ]
+}
